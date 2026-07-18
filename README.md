@@ -1,13 +1,14 @@
-# DJ JRV Website
+# DJ JRV / Romero Vision — Version 2
 
-GitHub-ready static website for DJ JRV / Romero Vision.
+This version is rebuilt to closely match the approved ChatGPT site and stores all images locally in the repository.
 
-## Upload to GitHub
-Upload all files in this folder to the root of the `dj-jrv` repository.
+## Upload
+Replace the current GitHub repository files with everything in this package, including the `images` folder.
 
 ## Netlify
-- Build command: leave blank
-- Publish directory: `.`
+Netlify will redeploy automatically after the GitHub commit.
 
-## Images
-The current CSS references the two images from the live ChatGPT site. For permanent ownership, replace those URLs with locally uploaded files later.
+## Form
+The quote form uses Netlify Forms:
+- Form name: `quote-request`
+- View submissions in Netlify under Forms.
