@@ -1,4 +1,5 @@
 import MobileNav from "./MobileNav";
+import QuoteForm from "./QuoteForm";
 
 const services = [
   {
@@ -196,16 +197,7 @@ export default function Home() {
         <div className="booking-glow" />
         <div className="section-shell booking-grid">
           <div className="booking-copy"><p className="eyebrow"><span /> Request an event quote</p><h2>Tell us about<br />your <em>event.</em></h2><p>Share the details of your celebration and DJ JRV will follow up by phone with availability and personalized pricing.</p><div className="quote-next-steps"><h3>What happens next</h3><ol><li>Jason reviews your event details.</li><li>He follows up by phone to discuss availability and pricing.</li><li>Your event details and payment plan are confirmed directly—no deposit is currently required.</li></ol></div><div className="contact-mini"><span>BOOKING PHONE</span><a href={bookingPhoneHref}>{bookingPhoneDisplay}</a></div><div className="contact-mini"><span>BOOKING EMAIL</span><a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a></div><div className="contact-mini"><span>SERVICE AREA</span><p>Stockton, California • Up to 25 miles</p></div></div>
-          <form className="booking-form" id="quote" action="mailto:norcaljv209@gmail.com" method="post" encType="text/plain" aria-labelledby="quote-form-title" aria-describedby="quote-form-intro quote-form-note">
-            <h3 id="quote-form-title">Request a Personalized Quote</h3>
-            <p id="quote-form-intro">Share a few details so DJ JRV can understand your event and prepare the right options. Services start at $300.</p>
-            <p className="required-note"><span aria-hidden="true">*</span> Required fields</p>
-            <fieldset><legend>Contact information</legend><div className="field-row"><label>Your name <span className="required">Required</span><input name="name" autoComplete="name" required placeholder="First and last name" /></label><label>Phone number <span className="required">Required</span><input type="tel" name="phone" autoComplete="tel" required placeholder="(209) 555-0123" /></label></div><div className="field-row"><label>Email address<input type="email" name="email" autoComplete="email" placeholder="you@email.com" /></label><label>Preferred contact method<select name="contact-method" defaultValue="Phone call"><option>Phone call</option><option>Text message</option><option>Email</option></select></label></div></fieldset>
-            <fieldset><legend>Event details</legend><div className="field-row"><label>Event date<input type="date" name="event-date" /></label><label>Event type <span className="required">Required</span><select name="event-type" defaultValue="" required><option value="" disabled>Select event type</option><option>Wedding</option><option>Quinceañera</option><option>Birthday Party</option><option>Private Party</option><option>Corporate Event</option><option>School or Community Event</option><option>Other Celebration</option></select></label></div><div className="field-row"><label>Guest count<input type="number" name="guest-count" min="1" inputMode="numeric" placeholder="Approximate number" /></label><label>Venue or city<input name="venue" autoComplete="street-address" placeholder="Venue name or event city" /></label></div></fieldset>
-            <label>Tell us about your event<textarea name="details" rows={5} placeholder="Important moments, guest age range, music preferences, lighting needs, hours, and anything else we should know..." /></label>
-            <button className="button button-primary" type="submit">Request My Quote <span>↗</span></button>
-            <p className="form-confirmation" id="quote-form-note"><strong>What happens after you submit:</strong> Your email app will open with these details prepared. After you send it, Jason will review your request and follow up by phone using the number you provided.</p>
-          </form>
+          <QuoteForm />
         </div>
       </section>
 

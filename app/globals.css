@@ -202,6 +202,13 @@ h1 em, h2 em { color: #d8dce0; font-weight: 400; }
 .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { border-color: #fff; box-shadow: 0 0 0 2px rgba(255,255,255,.15); }
 .booking-form option { color: #fff; background: #111; }
 .booking-form .button { width: 100%; border: 0; }
+.booking-form .button:disabled { cursor: wait; opacity: .72; }
+.form-honeypot { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+.form-status { margin: 16px 0 0; padding: 16px; font-size: 12px; line-height: 1.65; text-align: left; }
+.form-status strong { display: block; margin-bottom: 3px; color: #fff; }
+.form-status-success { border: 1px solid rgba(115, 220, 155, .55); background: rgba(37, 128, 72, .18); color: #d9f7e3; }
+.form-status-error { border: 1px solid rgba(255, 106, 126, .55); background: rgba(197, 22, 46, .16); color: #ffdce1; }
+.form-status-error a { color: #fff; text-decoration: underline; }
 .form-confirmation { margin: 16px 0 0; padding: 14px 16px; border: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.66); font-size: 11px; line-height: 1.6; text-align: left; }
 .form-confirmation strong { color: #fff; }
 
