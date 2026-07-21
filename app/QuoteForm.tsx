@@ -32,6 +32,8 @@ export default function QuoteForm() {
     <form
       className="booking-form"
       id="quote"
+      action="https://formspree.io/f/xwvgobww"
+      method="POST"
       onSubmit={handleSubmit}
       aria-labelledby="quote-form-title"
       aria-describedby="quote-form-intro quote-form-note"
