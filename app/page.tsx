@@ -17,15 +17,15 @@ const businessJsonLd = {
   email: "norcaljv209@gmail.com",
   priceRange: "Starting at $300",
   areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      addressLocality: "Stockton",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
-    geoRadius: "25 miles",
+  "@type": "GeoCircle",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Stockton",
+    addressRegion: "CA",
+    addressCountry: "US",
   },
+  geoRadius: "25 miles",
+},
   founder: {
     "@type": "Person",
     name: "Jason Romero Vasquez",
