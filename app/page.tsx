@@ -1,6 +1,45 @@
 import MobileNav from "./MobileNav";
 import QuoteForm from "./QuoteForm";
-
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "DJ JRV / Romero Vision",
+  alternateName: "DJ JRV",
+  url: "https://www.dj-jrv.com/",
+  logo: "https://www.dj-jrv.com/images/dj-jrv-logo.webp",
+  image: [
+    "https://www.dj-jrv.com/images/dj-jrv-setup.webp",
+    "https://www.dj-jrv.com/images/dj-jrv-live-setup.webp",
+  ],
+  description:
+    "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California.",
+  telephone: "+1-209-337-5488",
+  email: "norcaljv209@gmail.com",
+  priceRange: "Starting at $300",
+  areaServed: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      addressLocality: "Stockton",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
+    geoRadius: "25 miles",
+  },
+  founder: {
+    "@type": "Person",
+    name: "Jason Romero Vasquez",
+  },
+  knowsAbout: [
+    "Wedding DJ services",
+    "Quinceañera DJ services",
+    "Birthday party DJ services",
+    "Private event DJ services",
+    "Corporate event DJ services",
+    "Old School music",
+    "Dance floor lighting",
+  ],
+};
 const services = [
   {
     number: "01",
@@ -64,6 +103,12 @@ function Waveform({ seed = 0 }: { seed?: number }) {
 export default function Home() {
   return (
     <main>
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(businessJsonLd).replace(/</g, "\\u003c"),
+  }}
+/>
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="DJ JRV home">
