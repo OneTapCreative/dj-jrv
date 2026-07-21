@@ -2,27 +2,48 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.dj-jrv.com"),
+
   title: "DJ JRV | Stockton DJ for Weddings, Quinceañeras & Events",
+
   description:
-    "Stockton DJ for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations. Old School music, dance floor lighting, and 10 years of experience.",
-  keywords: [
-    "DJ JRV",
-    "Romero Vision",
-    "wedding DJ",
-    "quinceañera DJ",
-    "birthday party DJ",
-    "corporate event DJ",
-    "private party DJ",
-    "Old School DJ",
-    "Stockton DJ",
-    "dance floor lighting",
-  ],
+    "Book DJ JRV for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California. DJ services start at $300.",
+
+  applicationName: "DJ JRV / Romero Vision",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   openGraph: {
     title: "DJ JRV | Stockton DJ for Weddings, Quinceañeras & Events",
     description:
-      "Old School music, dance floor lighting, and 10 years of event experience. DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and more.",
+      "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California.",
+    url: "/",
+    siteName: "DJ JRV / Romero Vision",
+    locale: "en_US",
     type: "website",
   },
+
+  twitter: {
+    card: "summary",
+    title: "DJ JRV | Stockton DJ for Weddings, Quinceañeras & Events",
+    description:
+      "Professional DJ services for weddings, quinceañeras, birthdays, and special events in Stockton, California.",
+  },
+
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
