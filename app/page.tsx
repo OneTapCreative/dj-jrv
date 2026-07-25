@@ -1,45 +1,10 @@
 import MobileNav from "./MobileNav";
 import QuoteForm from "./QuoteForm";
-const businessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "DJ JRV / Romero Vision",
-  alternateName: "DJ JRV",
-  url: "https://www.dj-jrv.com/",
-  logo: "https://www.dj-jrv.com/images/dj-jrv-logo.webp",
-  image: [
-    "https://www.dj-jrv.com/images/dj-jrv-setup.webp",
-    "https://www.dj-jrv.com/images/dj-jrv-live-setup.webp",
-  ],
-  description:
-    "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California.",
-  telephone: "+1-209-337-5488",
-  email: "norcaljv209@gmail.com",
-  priceRange: "Starting at $300",
-  areaServed: {
-  "@type": "GeoCircle",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Stockton",
-    addressRegion: "CA",
-    addressCountry: "US",
-  },
-  geoRadius: "25 miles",
-},
-  founder: {
-    "@type": "Person",
-    name: "Jason Romero Vasquez",
-  },
-  knowsAbout: [
-    "Wedding DJ services",
-    "Quinceañera DJ services",
-    "Birthday party DJ services",
-    "Private event DJ services",
-    "Corporate event DJ services",
-    "Old School music",
-    "Dance floor lighting",
-  ],
-};
+
+const siteUrl = "https://www.dj-jrv.com";
+const bookingPhoneDisplay = "209-337-5488";
+const bookingPhoneHref = "tel:+12093375488";
+
 const services = [
   {
     number: "01",
@@ -86,8 +51,139 @@ const faqs = [
   ["What payment methods do you accept?", "DJ JRV accepts Apple Pay, Cash App, and cash."],
 ];
 
-const bookingPhoneDisplay = "209-337-5488";
-const bookingPhoneHref = "tel:+12093375488";
+const serviceArea = {
+  "@type": "Place",
+  name: "Stockton, California and communities within approximately 25 miles",
+};
+
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": `${siteUrl}/#business`,
+      name: "DJ JRV / Romero Vision",
+      alternateName: "DJ JRV",
+      url: `${siteUrl}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/dj-jrv-logo.webp`,
+      },
+      image: [
+        `${siteUrl}/images/dj-jrv-setup.webp`,
+        `${siteUrl}/images/dj-jrv-live-setup.webp`,
+      ],
+      description:
+        "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California and nearby communities.",
+      slogan: "Old School music. No-limits event energy.",
+      telephone: "+1-209-337-5488",
+      email: "norcaljv209@gmail.com",
+      priceRange: "$300+",
+      currenciesAccepted: "USD",
+      paymentAccepted: ["Apple Pay", "Cash App", "Cash"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Stockton",
+        addressRegion: "CA",
+        addressCountry: "US",
+      },
+      areaServed: serviceArea,
+      founder: {
+        "@id": `${siteUrl}/#jason-romero-vasquez`,
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-209-337-5488",
+        email: "norcaljv209@gmail.com",
+        contactType: "event booking",
+        areaServed: "US-CA",
+        availableLanguage: ["English"],
+      },
+      knowsAbout: [
+        "Wedding DJ services",
+        "Quinceañera DJ services",
+        "Birthday party DJ services",
+        "Private event DJ services",
+        "Corporate event DJ services",
+        "Old School music",
+        "Dance floor lighting",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "DJ JRV Event Services",
+        itemListElement: services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: `${service.title} DJ Services`,
+            serviceType: `${service.title} DJ services`,
+            description: service.description,
+            areaServed: serviceArea,
+            provider: {
+              "@id": `${siteUrl}/#business`,
+            },
+          },
+        })),
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#jason-romero-vasquez`,
+      name: "Jason Romero Vasquez",
+      alternateName: "DJ JRV",
+      jobTitle: "Professional Event DJ",
+      worksFor: {
+        "@id": `${siteUrl}/#business`,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: "DJ JRV / Romero Vision",
+      description:
+        "Official website for DJ JRV, a Stockton event DJ serving weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.",
+      publisher: {
+        "@id": `${siteUrl}/#business`,
+      },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#dj-services`,
+      name: "DJ Services in Stockton, California",
+      serviceType: "Professional event DJ services",
+      description:
+        "DJ entertainment for weddings, quinceañeras, birthday parties, private parties, corporate events, school functions, and special celebrations.",
+      provider: {
+        "@id": `${siteUrl}/#business`,
+      },
+      areaServed: serviceArea,
+      offers: {
+        "@type": "Offer",
+        url: `${siteUrl}/#quote`,
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: 300,
+          priceCurrency: "USD",
+        },
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      mainEntity: faqs.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      })),
+    },
+  ],
+};
 
 function Waveform({ seed = 0 }: { seed?: number }) {
   const bars = [30, 62, 44, 84, 55, 96, 39, 70, 49, 90, 58, 76, 33, 68, 92, 51, 80, 42, 65, 88, 36, 73, 54, 81];
@@ -104,11 +200,11 @@ export default function Home() {
   return (
     <main>
       <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(businessJsonLd).replace(/</g, "\\u003c"),
-  }}
-/>
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(businessJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="DJ JRV home">
@@ -132,7 +228,7 @@ export default function Home() {
         <div className="hero-content section-shell" id="main-content">
           <p className="hero-brandline">DJ JRV <span>/</span> ROMERO VISION</p>
           <p className="eyebrow"><span /> Stockton, California • Up to 25 Miles</p>
-          <h1 id="hero-title">Unforgettable Music<br /><em>For Every Celebration.</em></h1>
+          <h1 id="hero-title">Stockton DJ Services<br /><em>For Every Celebration.</em></h1>
           <p className="hero-copy">DJ JRV brings 10 years of experience, Old School favorites, and no-limits energy to weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Request a Quote <span>↗</span></a>
@@ -154,8 +250,8 @@ export default function Home() {
       <section className="section services" id="services">
         <div className="section-shell">
           <div className="section-heading split-heading">
-            <div><p className="eyebrow dark"><span /> Built for every celebration</p><h2>More than music.<br /><em>A complete event.</em></h2></div>
-            <p>Bring your guests together with Old School music, dance floor lighting, and an experienced DJ who keeps the energy up and the event moving.</p>
+            <div><p className="eyebrow dark"><span /> Built for every celebration</p><h2>DJ services for<br /><em>every celebration.</em></h2></div>
+            <p>Bring your guests together with Old School music, dance floor lighting, and an experienced Stockton DJ who keeps the energy up and the event moving.</p>
           </div>
           <div className="service-grid">
             {services.map((service) => (
@@ -252,7 +348,6 @@ export default function Home() {
         <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
-
     </main>
   );
 }
