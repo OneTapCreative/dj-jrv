@@ -46,14 +46,14 @@ const faqs = [
   ["What events does DJ JRV serve?", "DJ JRV provides entertainment for weddings, quinceañeras, birthday parties, private parties, corporate events, and other celebrations in Stockton and nearby communities."],
   ["What music does DJ JRV specialize in?", "Old School music is DJ JRV's specialty. Share the age range and atmosphere you want when requesting your quote."],
   ["Do you provide dance floor lighting?", "Yes. Dance floor lighting is available as an additional service and can be discussed when planning your event."],
-  ["How far do you travel?", "DJ JRV is based in Stockton, California and serves events within approximately 25 miles."],
+  ["How far do you travel?", "DJ JRV is based in Stockton, California and serves events within approximately 130 miles."],
   ["Is a deposit required?", "No deposit is currently required. Event details and payment arrangements are confirmed directly with DJ JRV."],
   ["What payment methods do you accept?", "DJ JRV accepts Apple Pay, Cash App, and cash."],
 ];
 
 const serviceArea = {
   "@type": "Place",
-  name: "Stockton, California and communities within approximately 25 miles",
+  name: "Stockton, California and communities within approximately 130 miles",
 };
 
 const businessJsonLd = {
@@ -217,7 +217,7 @@ export default function Home() {
         <div className="hero-shade" />
         <div className="hero-content section-shell" id="main-content">
           <p className="hero-brandline">DJ JRV <span>/</span> ROMERO VISION</p>
-          <p className="eyebrow"><span /> Stockton, California • Up to 25 Miles</p>
+          <p className="eyebrow"><span /> Stockton, California • Up to 130 Miles</p>
           <h1 id="hero-title">Stockton DJ Services<br /><em>For Every Celebration.</em></h1>
           <p className="hero-copy">DJ JRV brings 10 years of experience, Old School favorites, and no-limits energy to weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.</p>
           <div className="hero-actions">
@@ -269,7 +269,7 @@ export default function Home() {
             <p className="eyebrow"><span /> Meet Jason Romero Vasquez</p>
             <h2>Ten years behind<br /><em>the music.</em></h2>
             <p>Jason Romero Vasquez—DJ JRV—has spent 10 years bringing music and energy to the room. His specialty is Old School music, with every playlist shaped around the event, the audience, and the atmosphere his clients want.</p>
-            <p>Based in Stockton, DJ JRV serves weddings, quinceañeras, birthdays, private parties, corporate events, and other celebrations within approximately 25 miles.</p>
+            <p>Based in Stockton, DJ JRV serves weddings, quinceañeras, birthdays, private parties, corporate events, and other celebrations within approximately 130 miles.</p>
             <blockquote>&ldquo;DJ until you kick me out. No limits.&rdquo;</blockquote>
             <div className="about-signature"><strong>JRV</strong><span>JASON ROMERO VASQUEZ • 10 YEARS</span></div>
           </div>
@@ -327,7 +327,7 @@ export default function Home() {
       <section className="booking" id="booking">
         <div className="booking-glow" />
         <div className="section-shell booking-grid">
-          <div className="booking-copy"><p className="eyebrow"><span /> Request an event quote</p><h2>Tell us about<br />your <em>event.</em></h2><p>Share the details of your celebration and DJ JRV will follow up by phone with availability and personalized pricing.</p><div className="quote-next-steps"><h3>What happens next</h3><ol><li>Jason reviews your event details.</li><li>He follows up by phone to discuss availability and pricing.</li><li>Your event details and payment plan are confirmed directly—no deposit is currently required.</li></ol></div><div className="contact-mini"><span>BOOKING PHONE</span><a href={bookingPhoneHref}>{bookingPhoneDisplay}</a></div><div className="contact-mini"><span>BOOKING EMAIL</span><a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a></div><div className="contact-mini"><span>SERVICE AREA</span><p>Stockton, California • Up to 25 miles</p></div></div>
+          <div className="booking-copy"><p className="eyebrow"><span /> Request an event quote</p><h2>Tell us about<br />your <em>event.</em></h2><p>Share the details of your celebration and DJ JRV will follow up by phone with availability and personalized pricing.</p><div className="quote-next-steps"><h3>What happens next</h3><ol><li>Jason reviews your event details.</li><li>He follows up by phone to discuss availability and pricing.</li><li>Your event details and payment plan are confirmed directly—no deposit is currently required.</li></ol></div><div className="contact-mini"><span>BOOKING PHONE</span><a href={bookingPhoneHref}>{bookingPhoneDisplay}</a></div><div className="contact-mini"><span>BOOKING EMAIL</span><a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a></div><div className="contact-mini"><span>SERVICE AREA</span><p>Stockton, California • Up to 130 miles</p></div></div>
           <QuoteForm />
         </div>
       </section>
