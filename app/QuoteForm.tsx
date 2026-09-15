@@ -43,7 +43,7 @@ export default function QuoteForm() {
       <input className="form-honeypot" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <h3 id="quote-form-title">Request a Personalized Quote</h3>
-      <p id="quote-form-intro">Share a few details so DJ JRV can understand your event and prepare the right options. Services start at $300.</p>
+      <p id="quote-form-intro">Share a few details so DJ JRV can understand your event and prepare the right options. Services start at $400.</p>
       <p className="required-note"><span aria-hidden="true">*</span> Required fields</p>
 
       <fieldset>
