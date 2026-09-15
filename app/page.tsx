@@ -78,7 +78,7 @@ const businessJsonLd = {
       slogan: "Old School music. No-limits event energy.",
       telephone: "+1-209-337-5488",
       email: "norcaljv209@gmail.com",
-      priceRange: "$300+",
+      priceRange: "$400+",
       currenciesAccepted: "USD",
       paymentAccepted: ["Apple Pay", "Cash App", "Cash"],
       address: {
@@ -165,7 +165,7 @@ const businessJsonLd = {
         priceCurrency: "USD",
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: 300,
+          minPrice: 400,
           priceCurrency: "USD",
         },
       },
@@ -236,7 +236,7 @@ export default function Home() {
           </div>
           <div className="hero-proof" aria-label="DJ JRV service benefits">
             <div><strong>10 Years</strong><span>Experienced event DJ</span></div>
-            <div><strong>Starting at $300</strong><span>Clear starting price</span></div>
+            <div><strong>Starting at $400</strong><span>Clear starting price</span></div>
             <div><strong>Available Daily</strong><span>Flexible event hours</span></div>
           </div>
         </div>
@@ -329,8 +329,8 @@ export default function Home() {
 
       <section className="availability" id="availability">
         <div className="section-shell availability-inner">
-          <div><p className="eyebrow"><span /> Event DJ from $300</p><h2>Check your date<br /><em>by phone.</em></h2></div>
-          <div><p>DJ services start at $300. Call Jason to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href={bookingPhoneHref}>Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
+          <div><p className="eyebrow"><span /> Event DJ from $400</p><h2>Check your date<br /><em>by phone.</em></h2></div>
+          <div><p>DJ services start at $400. Call Jason to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href={bookingPhoneHref}>Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
         </div>
       </section>
 
