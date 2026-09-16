@@ -335,7 +335,7 @@ export default function Home() {
       <a className="floating-book" href="#quote"><span>Request a Quote</span><b>↗</b></a>
 
       <footer>
-        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a></div>
+        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a></div></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
     </main>
