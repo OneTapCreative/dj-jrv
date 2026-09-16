@@ -84,7 +84,7 @@ export default function QuoteForm() {
 
       {status === "error" && (
         <p className="form-status form-status-error" role="alert">
-          <strong>We couldn’t send your request.</strong> Please try again, call <a href="tel:+12093375488">209-337-5488</a>, or email <a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a>.
+          <strong>We couldn’t send your request.</strong> Please try again or email <a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a>.
         </p>
       )}
 
