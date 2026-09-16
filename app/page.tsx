@@ -2,8 +2,6 @@ import MobileNav from "./MobileNav";
 import QuoteForm from "./QuoteForm";
 
 const siteUrl = "https://www.dj-jrv.com";
-const bookingPhoneDisplay = "209-337-5488";
-const bookingPhoneHref = "tel:+12093375488";
 
 const services = [
   {
@@ -76,7 +74,6 @@ const businessJsonLd = {
       description:
         "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California and nearby communities.",
       slogan: "Old School music. No-limits event energy.",
-      telephone: "+1-209-337-5488",
       email: "norcaljv209@gmail.com",
       priceRange: "Custom event quotes",
       currenciesAccepted: "USD",
@@ -93,7 +90,6 @@ const businessJsonLd = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+1-209-337-5488",
         email: "norcaljv209@gmail.com",
         contactType: "event booking",
         areaServed: "US-CA",
@@ -222,7 +218,7 @@ export default function Home() {
           <p className="hero-copy">DJ JRV brings 10 years of experience, Old School favorites, and no-limits energy to weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Request a Quote <span>↗</span></a>
-            <a className="button button-ghost" href={bookingPhoneHref}>Check Availability <span>↗</span></a>
+            <a className="button button-ghost" href="#quote">Check Availability <span>↗</span></a>
           </div>
           <div className="hero-proof" aria-label="DJ JRV service benefits">
             <div><strong>10 Years</strong><span>Experienced event DJ</span></div>
@@ -308,7 +304,7 @@ export default function Home() {
 
       <section className="section faq" id="faq">
         <div className="section-shell faq-grid">
-          <div><p className="eyebrow dark"><span /> Good to know</p><h2>Questions,<br /><em>answered.</em></h2><p>Still wondering about something?</p><a href={bookingPhoneHref}>Call {bookingPhoneDisplay} ↗</a></div>
+          <div><p className="eyebrow dark"><span /> Good to know</p><h2>Questions,<br /><em>answered.</em></h2><p>Still wondering about something?</p><a href="#quote">Request a Personalized Quote ↗</a></div>
           <div className="faq-list">
             {faqs.map(([question, answer], index) => (
               <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
@@ -319,15 +315,15 @@ export default function Home() {
 
       <section className="availability" id="availability">
         <div className="section-shell availability-inner">
-          <div><p className="eyebrow"><span /> Personalized Event Quotes</p><h2>Check your date<br /><em>by phone.</em></h2></div>
-          <div><p>Pricing is customized based on your event details. Call Jason to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href={bookingPhoneHref}>Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
+          <div><p className="eyebrow"><span /> Personalized Event Quotes</p><h2>Check your date<br /><em>with a quote.</em></h2></div>
+          <div><p>Pricing is customized based on your event details. Submit your celebration information to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href="#quote">Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
         </div>
       </section>
 
       <section className="booking" id="booking">
         <div className="booking-glow" />
         <div className="section-shell booking-grid">
-          <div className="booking-copy"><p className="eyebrow"><span /> Request an event quote</p><h2>Tell us about<br />your <em>event.</em></h2><p>Share the details of your celebration and DJ JRV will follow up by phone with availability and personalized pricing.</p><div className="quote-next-steps"><h3>What happens next</h3><ol><li>Jason reviews your event details.</li><li>He follows up by phone to discuss availability and pricing.</li><li>Your event details and payment plan are confirmed directly—no deposit is currently required.</li></ol></div><div className="contact-mini"><span>BOOKING PHONE</span><a href={bookingPhoneHref}>{bookingPhoneDisplay}</a></div><div className="contact-mini"><span>BOOKING EMAIL</span><a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a></div><div className="contact-mini"><span>SERVICE AREA</span><p>Stockton, California • Up to 130 miles</p></div></div>
+          <div className="booking-copy"><p className="eyebrow"><span /> Request an event quote</p><h2>Tell us about<br />your <em>event.</em></h2><p>Share the details of your celebration and DJ JRV will follow up by phone with availability and personalized pricing.</p><div className="quote-next-steps"><h3>What happens next</h3><ol><li>Jason reviews your event details.</li><li>He follows up using your preferred contact method to discuss availability and pricing.</li><li>Your event details and payment plan are confirmed directly—no deposit is currently required.</li></ol></div><div className="contact-mini"><span>BOOKING EMAIL</span><a href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com</a></div><div className="contact-mini"><span>SERVICE AREA</span><p>Stockton, California • Up to 130 miles</p></div></div>
           <QuoteForm />
         </div>
       </section>
@@ -335,7 +331,7 @@ export default function Home() {
       <a className="floating-book" href="#quote"><span>Request a Quote</span><b>↗</b></a>
 
       <footer>
-        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a></div>
+        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
     </main>
