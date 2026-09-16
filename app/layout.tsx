@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "event DJ Stockton",
     "private party DJ",
     "corporate event DJ",
-    "Old School DJ",
+    "All-genre DJ",
     "dance floor lighting",
     "DJ JRV",
     "Romero Vision",

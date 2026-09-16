@@ -37,14 +37,14 @@ const services = [
 ];
 
 const mixes = [
-  { genre: "DJ JRV Specialty", title: "Old School Favorites", length: "CLASSIC PARTY ENERGY", color: "red" },
+  { genre: "All-Genre Selection", title: "Music for Every Crowd", length: "ALL STYLES • ALL EVENTS", color: "red" },
   { genre: "For Every Celebration", title: "All-Occasion Party Mix", length: "BUILT FOR YOUR EVENT", color: "silver" },
   { genre: "Flexible Event Energy", title: "No-Limits Party Set", length: "KEEP THE NIGHT MOVING", color: "black" },
 ];
 
 const faqs = [
   ["What events does DJ JRV serve?", "DJ JRV provides entertainment for weddings, quinceañeras, birthday parties, private parties, corporate events, and other celebrations in Stockton and nearby communities."],
-  ["What music does DJ JRV specialize in?", "Old School music is DJ JRV's specialty. Share the age range and atmosphere you want when requesting your quote."],
+  ["What music does DJ JRV play?", "DJ JRV plays all types of music and shapes every playlist around the event, the audience, and the atmosphere you want."],
   ["Do you provide dance floor lighting?", "Yes. Dance floor lighting is available as an additional service and can be discussed when planning your event."],
   ["How far do you travel?", "DJ JRV is based in Stockton, California and serves events within approximately 130 miles."],
   ["Is a deposit required?", "No deposit is currently required. Event details and payment arrangements are confirmed directly with DJ JRV."],
@@ -67,7 +67,7 @@ const businessJsonLd = {
       url: `${siteUrl}/`,
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/images/dj-jrv-logo.webp`,
+        url: `${siteUrl}/images/dj-jrv-brand-4k.webp`,
       },
       image: [
         `${siteUrl}/images/dj-jrv-setup.webp`,
@@ -75,7 +75,7 @@ const businessJsonLd = {
       ],
       description:
         "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California and nearby communities.",
-      slogan: "Old School music. No-limits event energy.",
+      slogan: "All types of music. No-limits event energy.",
       telephone: "+1-209-337-5488",
       email: "norcaljv209@gmail.com",
       priceRange: "Custom event quotes",
@@ -105,7 +105,7 @@ const businessJsonLd = {
         "Birthday party DJ services",
         "Private event DJ services",
         "Corporate event DJ services",
-        "Old School music",
+        "Multi-genre music",
         "Dance floor lighting",
       ],
       hasOfferCatalog: {
@@ -198,7 +198,7 @@ export default function Home() {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="DJ JRV home">
-          <img className="brand-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" />
+          <img className="brand-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" />
           <span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -219,7 +219,7 @@ export default function Home() {
           <p className="hero-brandline">DJ JRV <span>/</span> ROMERO VISION</p>
           <p className="eyebrow"><span /> Stockton, California • Up to 130 Miles</p>
           <h1 id="hero-title">Stockton DJ Services<br /><em>For Every Celebration.</em></h1>
-          <p className="hero-copy">DJ JRV brings 10 years of experience, Old School favorites, and no-limits energy to weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.</p>
+          <p className="hero-copy">DJ JRV brings 10 years of experience, all types of music, and no-limits energy to weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#quote">Request a Quote <span>↗</span></a>
             <a className="button button-ghost" href={bookingPhoneHref}>Check Availability <span>↗</span></a>
@@ -241,7 +241,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-heading split-heading">
             <div><p className="eyebrow dark"><span /> Built for every celebration</p><h2>DJ services for<br /><em>every celebration.</em></h2></div>
-            <p>Bring your guests together with Old School music, dance floor lighting, and an experienced Stockton DJ who keeps the energy up and the event moving.</p>
+            <p>Bring your guests together with music for every crowd, dance floor lighting, and an experienced Stockton DJ who keeps the energy up and the event moving.</p>
           </div>
           <div className="service-grid">
             {services.map((service) => (
@@ -268,7 +268,7 @@ export default function Home() {
           <div className="about-copy">
             <p className="eyebrow"><span /> Meet Jason Romero Vasquez</p>
             <h2>Ten years behind<br /><em>the music.</em></h2>
-            <p>Jason Romero Vasquez—DJ JRV—has spent 10 years bringing music and energy to the room. His specialty is Old School music, with every playlist shaped around the event, the audience, and the atmosphere his clients want.</p>
+            <p>Jason Romero Vasquez—DJ JRV—has spent 10 years bringing music and energy to the room. He plays all types of music, with every playlist shaped around the event, the audience, and the atmosphere his clients want.</p>
             <p>Based in Stockton, DJ JRV serves weddings, quinceañeras, birthdays, private parties, corporate events, and other celebrations within approximately 130 miles.</p>
             <blockquote>&ldquo;DJ until you kick me out. No limits.&rdquo;</blockquote>
             <div className="about-signature"><strong>JRV</strong><span>JASON ROMERO VASQUEZ • 10 YEARS</span></div>
@@ -279,9 +279,9 @@ export default function Home() {
       <section className="section mixes" id="mixes">
         <div className="section-shell">
           <div className="section-heading center-heading">
-            <p className="eyebrow"><span /> Old School specialist</p>
+            <p className="eyebrow"><span /> All genres for every event</p>
             <h2>Your event. <em>Your soundtrack.</em></h2>
-            <p>Tell DJ JRV about your guests, your important moments, and the energy you want. The music starts with his Old School specialty and is shaped for your celebration.</p>
+            <p>Tell DJ JRV about your guests, your important moments, and the energy you want. Every playlist is shaped around your celebration, your guests, and the energy you want.</p>
           </div>
           <div className="mix-grid">
             {mixes.map((mix, index) => (
@@ -335,7 +335,7 @@ export default function Home() {
       <a className="floating-book" href="#quote"><span>Request a Quote</span><b>↗</b></a>
 
       <footer>
-        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-logo.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>Old School music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a></div></div>
+        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>All types of music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a></div></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
     </main>
