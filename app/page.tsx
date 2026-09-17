@@ -2,6 +2,7 @@ import MobileNav from "./MobileNav";
 import QuoteForm from "./QuoteForm";
 
 const siteUrl = "https://www.dj-jrv.com";
+const instagramUrl = "https://www.instagram.com/_dj.jrv/";
 const bookingPhoneDisplay = "209-337-5488";
 const bookingPhoneHref = "tel:+12093375488";
 
@@ -65,6 +66,7 @@ const businessJsonLd = {
       name: "DJ JRV / Romero Vision",
       alternateName: "DJ JRV",
       url: `${siteUrl}/`,
+      sameAs: [instagramUrl],
       logo: {
         "@type": "ImageObject",
         url: `${siteUrl}/images/dj-jrv-brand-4k.webp`,
@@ -306,6 +308,20 @@ export default function Home() {
         <a href="#quote">Your event could be next <b>↗</b></a>
       </section>
 
+      <section className="instagram" aria-labelledby="instagram-title">
+        <div className="section-shell instagram-grid">
+          <div className="instagram-copy">
+            <p className="eyebrow"><span /> Follow DJ JRV</p>
+            <h2 id="instagram-title">Follow the <em>music.</em></h2>
+            <p>See more from DJ JRV on Instagram. Follow @_DJ.JRV for event moments and updates.</p>
+            <a className="button button-primary" href={instagramUrl} target="_blank" rel="noopener noreferrer">View Instagram <span>↗</span></a>
+          </div>
+          <a className="instagram-art" href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Visit DJ JRV on Instagram">
+            <img src="/images/dj-jrv-instagram-qr.jpg" width="899" height="1536" loading="lazy" decoding="async" alt="DJ JRV Instagram QR artwork for @_DJ.JRV" />
+          </a>
+        </div>
+      </section>
+
       <section className="section faq" id="faq">
         <div className="section-shell faq-grid">
           <div><p className="eyebrow dark"><span /> Good to know</p><h2>Questions,<br /><em>answered.</em></h2><p>Still wondering about something?</p><a href={bookingPhoneHref}>Call {bookingPhoneDisplay} ↗</a></div>
@@ -335,7 +351,7 @@ export default function Home() {
       <a className="floating-book" href="#quote"><span>Request a Quote</span><b>↗</b></a>
 
       <footer>
-        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>All types of music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a></div></div>
+        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>All types of music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a><a className="footer-email" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram @_DJ.JRV ↗</a></div></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
     </main>
