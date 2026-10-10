@@ -5,16 +5,21 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "DJ JRV / Romero Vision",
     short_name: "DJ JRV",
     description:
-      "Professional DJ services for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California.",
+      "Professional DJ services in Stockton, CA for weddings, quinceañeras, birthdays, private events, and other celebrations.",
     start_url: "/",
     display: "standalone",
     background_color: "#0b0b0b",
     theme_color: "#0b0b0b",
     icons: [
       {
-        src: "/favicon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
+        src: "/favicon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/favicon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
   };

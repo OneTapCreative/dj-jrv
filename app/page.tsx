@@ -69,7 +69,7 @@ const businessJsonLd = {
       sameAs: [instagramUrl],
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/images/dj-jrv-brand-4k.webp`,
+        url: `${siteUrl}/images/dj-jrv-brand-logo.webp`,
       },
       image: [
         `${siteUrl}/images/dj-jrv-setup.webp`,
@@ -80,7 +80,6 @@ const businessJsonLd = {
       slogan: "All types of music. No-limits event energy.",
       telephone: "+1-209-337-5488",
       email: "norcaljv209@gmail.com",
-      priceRange: "Custom event quotes",
       currenciesAccepted: "USD",
       paymentAccepted: ["Apple Pay", "Cash App", "Cash"],
       address: {
@@ -200,7 +199,7 @@ export default function Home() {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="DJ JRV home">
-          <img className="brand-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" />
+          <img className="brand-logo" src="/images/dj-jrv-brand-logo.webp" width="512" height="512" alt="DJ JRV" />
           <span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -228,7 +227,7 @@ export default function Home() {
           </div>
           <div className="hero-proof" aria-label="DJ JRV service benefits">
             <div><strong>10 Years</strong><span>Experienced event DJ</span></div>
-            <div><strong>Custom Quotes</strong><span>Pricing based on your event</span></div>
+            <div><strong>Request a Quote</strong><span>Pricing based on your event</span></div>
             <div><strong>Available Daily</strong><span>Flexible event hours</span></div>
           </div>
         </div>
@@ -336,7 +335,7 @@ export default function Home() {
       <section className="availability" id="availability">
         <div className="section-shell availability-inner">
           <div><p className="eyebrow"><span /> Personalized Event Quotes</p><h2>Check your date<br /><em>by phone.</em></h2></div>
-          <div><p>Pricing is customized based on your event details. Call Jason to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href={bookingPhoneHref}>Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
+          <div><p>Request a personalized quote based on your event details. Call Jason to check availability for your wedding, quinceañera, birthday, private party, corporate event, or other celebration.</p><a className="button button-secondary availability-button" href={bookingPhoneHref}>Check Availability <span>↗</span></a><small>Available Monday through Sunday • Flexible end times • No deposit currently required</small><div className="payment-list" aria-label="Accepted payment methods"><span>Apple Pay</span><span>Cash App</span><span>Cash</span></div></div>
         </div>
       </section>
 
@@ -351,7 +350,7 @@ export default function Home() {
       <a className="floating-book" href="#quote"><span>Request a Quote</span><b>↗</b></a>
 
       <footer>
-        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-brand-4k.webp" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>All types of music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a><a className="footer-email" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram @_DJ.JRV ↗</a></div></div>
+        <div className="section-shell footer-top"><a className="brand footer-brand" href="#top"><img className="brand-logo footer-logo" src="/images/dj-jrv-brand-logo.webp" width="512" height="512" alt="DJ JRV" /><span className="brand-copy"><strong>DJ JRV</strong><small>ROMERO VISION</small></span></a><p>All types of music.<br />No-limits event energy.</p><div className="footer-contact"><a className="footer-email" href={bookingPhoneHref}>{bookingPhoneDisplay} ↗</a><a className="footer-email" href="mailto:norcaljv209@gmail.com">norcaljv209@gmail.com ↗</a><a className="footer-email" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram @_DJ.JRV ↗</a></div></div>
         <div className="section-shell footer-bottom"><span>© 2026 DJ JRV / Romero Vision</span><span>Dream. Focus. Create. Elevate.</span><div><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#quote">Contact</a></div></div>
       </footer>
     </main>

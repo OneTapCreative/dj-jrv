@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://www.dj-jrv.com";
-const siteTitle = "DJ JRV | Stockton DJ for Weddings, Quinceañeras & Events";
+const siteTitle = "DJ JRV | Stockton DJ for Weddings & Events";
 const siteDescription =
-  "Book DJ JRV for weddings, quinceañeras, birthdays, private parties, corporate events, and special celebrations in Stockton, California. Professional DJ services start at $300 and are available within approximately 25 miles.";
+  "Professional DJ services in Stockton, CA for weddings, quinceañeras, birthdays and private events. Music and dance floor lighting. Request a quote.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,9 +77,12 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon-32x32.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 
   manifest: "/manifest.webmanifest",
@@ -97,6 +100,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/dj-jrv-brand-hero.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
